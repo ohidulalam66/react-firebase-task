@@ -1,0 +1,25 @@
+Nav {
+    background: rgba(211, 206, 206, 0.233);
+    width: 40%;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+.nav {
+    color: rgba(0, 0, 0, 0.603);
+    padding: 5px 10px;
+    font-size: 20px;
+    margin: 0px 5px;
+}
+.nav:hover {
+    color: red;
+    background: coral;
+    border-radius: 10px;
+}
+
+.active {
+    color: rgba(0, 0, 0, 0.603);
+    background: coral;
+    border-radius: 10px;
+}
