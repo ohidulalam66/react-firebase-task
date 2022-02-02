@@ -1,17 +1,24 @@
 Nav {
     background: rgba(211, 206, 206, 0.233);
-    width: 50%;
     margin: auto;
-    margin-top: 80px;
     margin-bottom: 40px;
     border-radius: 10px;
     cursor: pointer;
+}
+.navLogout {
+    font-size: 16px;
+    padding: 5px 10px;
+    background: coral;
+    border-radius: 10px;
+}
+.navLogout:hover {
+    background: rgba(255, 127, 80, 0.527);
 }
 .nav {
     color: rgba(0, 0, 0, 0.603);
     padding: 5px 10px;
     font-size: 20px;
-    margin: 0px 5px;
+    margin: 3px 5px;
 }
 .nav:hover {
     color: red;
@@ -29,4 +36,9 @@ Nav {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.tooltip {
+    margin-top: 120px;
+    margin-left: 350px;
 }

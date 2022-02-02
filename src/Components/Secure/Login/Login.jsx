@@ -1,4 +1,5 @@
 import React from 'react'
+import './Login.css'
 import { Alert, Button, Container, Form, Spinner } from 'react-bootstrap'
 import { FcGoogle } from 'react-icons/fc'
 import { ImFacebook2 } from 'react-icons/im'
@@ -20,7 +21,7 @@ const Login = () => {
     <>
       <Container className="mt-5">
         <h1>React & Firebase Task</h1>
-        <Form className="w-50 mx-auto mt-5">
+        <Form className="w-75 mx-auto mt-5">
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Control type="email" placeholder="Email ID" required />
           </Form.Group>
@@ -51,20 +52,21 @@ const Login = () => {
             {error}
           </Alert>
         )}
-
-        <Button
-          onClick={handleGoogleSignIn}
-          className="mx-2"
-          variant="btn btn-outline-success"
-        >
-          <FcGoogle size="28" />
-        </Button>
-        <Button className="mx-2" variant="btn btn-outline-success">
-          <ImFacebook2 size="28" />
-        </Button>
-        <Button className="mx-2" variant="btn btn-outline-success">
-          <ImTwitter size="28" />
-        </Button>
+        <div className="mt-5">
+          <Button
+            onClick={handleGoogleSignIn}
+            className="mx-2"
+            variant="btn btn-outline-success"
+          >
+            <FcGoogle size="28" />
+          </Button>
+          <Button className="mx-2" variant="btn btn-outline-success">
+            <ImFacebook2 size="28" />
+          </Button>
+          <Button className="mx-2" variant="btn btn-outline-success">
+            <ImTwitter size="28" />
+          </Button>
+        </div>
       </Container>
     </>
   )

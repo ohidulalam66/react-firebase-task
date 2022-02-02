@@ -11,7 +11,7 @@ const Goal = () => {
   const { user } = useAuth()
 
   const onSubmit = (data) => {
-    if (data) {
+    if (data.name && data.goal) {
       fetch(
         'https://react-firebase-task-153f7-default-rtdb.firebaseio.com/goalDataRecords.json',
         {
@@ -41,14 +41,14 @@ const Goal = () => {
       <Menu />
       <Container>
         <Row>
-          <Col xs={6} md={4} className="text-start">
+          <Col xs={12} md={4} className="text-start">
             <h2 className="fw-bold">Goal</h2>
             <p className="text-muted">
               Select Your Primary Goal. What do you want to accomplish in the
               next few months?
             </p>
           </Col>
-          <Col xs={6} md={8} className="text-start text-muted goal-left">
+          <Col xs={12} md={8} className="text-start text-muted goal-left">
             <Form
               onSubmit={handleSubmit(onSubmit)}
               className="d-flex flex-column"
