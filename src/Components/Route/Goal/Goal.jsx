@@ -4,9 +4,11 @@ import { Col, Container, Form, Row } from 'react-bootstrap'
 import Menu from '../../Shared/Menu/Menu'
 import { useForm } from 'react-hook-form'
 import Swal from 'sweetalert2'
+import useAuth from '../../Hooks/useAuth'
 
 const Goal = () => {
   const { register, handleSubmit, reset } = useForm()
+  const { user } = useAuth()
 
   const onSubmit = (data) => {
     if (data) {
@@ -51,6 +53,10 @@ const Goal = () => {
               onSubmit={handleSubmit(onSubmit)}
               className="d-flex flex-column"
             >
+              <label className="mt-4 ms-4 check">
+                <span className="ms-2">My Name's </span>
+                <input {...register('name')} defaultValue={user.displayName} />
+              </label>
               <label className="mt-4 ms-4 check">
                 <input {...register('goal')} type="radio" value="Get Learner" />
                 <span className="ms-2">Get Learner</span>

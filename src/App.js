@@ -6,20 +6,52 @@ import Goal from './Components/Route/Goal/Goal'
 import Profile from './Components/Route/Profile/Profile'
 import Activity from './Components/Route/Activity/Activity'
 import SelectCoach from './Components/Route/SelectCoach/SelectCoach'
+import PrivateRoute from './Components/Secure/PrivateRoute/PrivateRoute'
+import AuthProvider from './Components/Shared/Context/AuthProvider/AuthProvider'
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/goal" element={<Goal />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/activity" element={<Activity />} />
-          <Route path="/selectCoach" element={<SelectCoach />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/goal"
+              element={
+                <PrivateRoute>
+                  <Goal />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <PrivateRoute>
+                  <Profile />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/activity"
+              element={
+                <PrivateRoute>
+                  <Activity />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/selectCoach"
+              element={
+                <PrivateRoute>
+                  <SelectCoach />
+                </PrivateRoute>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   )
 }

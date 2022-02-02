@@ -1,7 +1,21 @@
 import React from 'react'
-import { Button, Container, Form } from 'react-bootstrap'
+import { Alert, Button, Container, Form, Spinner } from 'react-bootstrap'
+import { FcGoogle } from 'react-icons/fc'
+import { ImFacebook2 } from 'react-icons/im'
+import { ImTwitter } from 'react-icons/im'
+import { useLocation, useNavigate } from 'react-router-dom'
+import useAuth from '../../Hooks/useAuth'
 
 const Login = () => {
+  const { user, signInWithGoogle, loading, error } = useAuth()
+
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle(location, navigate)
+  }
+
   return (
     <>
       <Container className="mt-5">
@@ -21,8 +35,35 @@ const Login = () => {
             LOGIN
           </Button>
         </Form>
-        <Button className="google-btn" variant="btn btn-outline-danger">
-          <i className="fab fa-google google-icon"></i>
+
+        {loading && (
+          <Spinner animation="border" variant="info" className="spinnerSize" />
+        )}
+
+        {user.email && (
+          <Alert className="my-3 fontSize" variant="success">
+            Congress! Created Register Successfully.
+          </Alert>
+        )}
+
+        {error && (
+          <Alert className="my-3 fontSize" variant="danger">
+            {error}
+          </Alert>
+        )}
+
+        <Button
+          onClick={handleGoogleSignIn}
+          className="mx-2"
+          variant="btn btn-outline-success"
+        >
+          <FcGoogle size="28" />
+        </Button>
+        <Button className="mx-2" variant="btn btn-outline-success">
+          <ImFacebook2 size="28" />
+        </Button>
+        <Button className="mx-2" variant="btn btn-outline-success">
+          <ImTwitter size="28" />
         </Button>
       </Container>
     </>
