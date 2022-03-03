@@ -22,7 +22,7 @@ const Profile = () => {
             <img
               src={user.photoURL}
               alt={user.displayName}
-              className="img-fluid"
+              className="img-fluid rounded-circle"
             />
             <h4>Name: {user.displayName}</h4>
             <h6>Email: {user.email}</h6>

@@ -5,10 +5,11 @@ import { NavLink } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Menu = () => {
-  const { user, logOut } = useAuth()
-  const [showA, setShowA] = useState(false)
+  const { user, logOut } = useAuth();
+  const [showA, setShowA] = useState(false);
 
-  const toggleShowA = () => setShowA(!showA)
+  const toggleShowA = () => setShowA(!showA);
+
   return (
     <>
       <Navbar expand="lg">
@@ -51,7 +52,7 @@ const Menu = () => {
         </Container>
       </Navbar>
     </>
-  )
+  );
 };
 
 export default Menu;
