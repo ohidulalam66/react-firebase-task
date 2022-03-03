@@ -1,5 +1,5 @@
-import React from 'react'
-import Menu from '../../Shared/Menu/Menu'
+import React from 'react';
+import Menu from '../../Shared/Menu/Menu';
 
 const Activity = () => {
   return (
@@ -7,7 +7,7 @@ const Activity = () => {
       <Menu />
       <h1>Activity</h1>
     </>
-  )
-}
+  );
+};
 
-export default Activity
+export default Activity;

@@ -1,21 +1,20 @@
-import React from 'react'
-import './Login.css'
-import { Alert, Button, Container, Form, Spinner } from 'react-bootstrap'
-import { FcGoogle } from 'react-icons/fc'
-import { ImFacebook2 } from 'react-icons/im'
-import { ImTwitter } from 'react-icons/im'
-import { useLocation, useNavigate } from 'react-router-dom'
-import useAuth from '../../Hooks/useAuth'
+import React from 'react';
+import './Login.css';
+import { Alert, Button, Container, Form, Spinner } from 'react-bootstrap';
+import { FcGoogle } from 'react-icons/fc';
+import { ImFacebook2 } from 'react-icons/im';
+import { ImTwitter } from 'react-icons/im';
+import { useLocation, useNavigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 const Login = () => {
-  const { user, signInWithGoogle, loading, error } = useAuth()
+  const { user, signInWithGoogle, loading, error } = useAuth();
 
-  const location = useLocation()
-  const navigate = useNavigate()
-
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleGoogleSignIn = () => {
-    signInWithGoogle(location, navigate)
-  }
+    signInWithGoogle(location, navigate);
+  };
 
   return (
     <>
@@ -70,6 +69,6 @@ const Login = () => {
       </Container>
     </>
   )
-}
+};
 
-export default Login
+export default Login;

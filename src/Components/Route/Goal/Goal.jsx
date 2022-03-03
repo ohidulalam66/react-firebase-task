@@ -1,14 +1,14 @@
-import React from 'react'
-import './Goal.css'
-import { Col, Container, Form, Row } from 'react-bootstrap'
-import Menu from '../../Shared/Menu/Menu'
-import { useForm } from 'react-hook-form'
-import Swal from 'sweetalert2'
-import useAuth from '../../Hooks/useAuth'
+import React from 'react';
+import './Goal.css';
+import { Col, Container, Form, Row } from 'react-bootstrap';
+import Menu from '../../Shared/Menu/Menu';
+import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
+import useAuth from '../../Hooks/useAuth';
 
 const Goal = () => {
-  const { register, handleSubmit, reset } = useForm()
-  const { user } = useAuth()
+  const { register, handleSubmit, reset } = useForm();
+  const { user } = useAuth();
 
   const onSubmit = (data) => {
     if (data.name && data.goal) {
@@ -101,7 +101,7 @@ const Goal = () => {
         </Row>
       </Container>
     </>
-  )
-}
+  );
+};
 
-export default Goal
+export default Goal;

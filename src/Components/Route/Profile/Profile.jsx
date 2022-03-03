@@ -1,11 +1,11 @@
-import React from 'react'
-import './Profile.css'
-import { Col, Container, Row } from 'react-bootstrap'
-import useAuth from '../../Hooks/useAuth'
-import Menu from '../../Shared/Menu/Menu'
+import React from 'react';
+import './Profile.css';
+import { Col, Container, Row } from 'react-bootstrap';
+import useAuth from '../../Hooks/useAuth';
+import Menu from '../../Shared/Menu/Menu';
 
 const Profile = () => {
-  const { user } = useAuth()
+  const { user } = useAuth();
   return (
     <>
       <Menu />
@@ -30,7 +30,7 @@ const Profile = () => {
         </Row>
       </Container>
     </>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

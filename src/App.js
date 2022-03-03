@@ -1,13 +1,13 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Login from './Components/Secure/Login/Login'
-import Goal from './Components/Route/Goal/Goal'
-import Profile from './Components/Route/Profile/Profile'
-import Activity from './Components/Route/Activity/Activity'
-import SelectCoach from './Components/Route/SelectCoach/SelectCoach'
-import PrivateRoute from './Components/Secure/PrivateRoute/PrivateRoute'
-import AuthProvider from './Components/Shared/Context/AuthProvider/AuthProvider'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Login from "./Components/Secure/Login/Login";
+import Goal from "./Components/Route/Goal/Goal";
+import Profile from "./Components/Route/Profile/Profile";
+import Activity from "./Components/Route/Activity/Activity";
+import SelectCoach from "./Components/Route/SelectCoach/SelectCoach";
+import PrivateRoute from "./Components/Secure/PrivateRoute/PrivateRoute";
+import AuthProvider from "./Components/Shared/Context/AuthProvider/AuthProvider";
 
 function App() {
   return (
@@ -53,7 +53,7 @@ function App() {
         </BrowserRouter>
       </AuthProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,5 +1,5 @@
-import React from 'react'
-import Menu from '../../Shared/Menu/Menu'
+import React from 'react';
+import Menu from '../../Shared/Menu/Menu';
 
 const SelectCoach = () => {
   return (
@@ -7,7 +7,7 @@ const SelectCoach = () => {
       <Menu />
       <h1>Select Coach</h1>
     </>
-  )
-}
+  );
+};
 
-export default SelectCoach
+export default SelectCoach;

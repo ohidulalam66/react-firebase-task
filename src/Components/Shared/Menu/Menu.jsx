@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import './Menu.css'
-import { Container, Nav, Navbar, Toast } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
-import useAuth from '../../Hooks/useAuth'
+import React, { useState } from 'react';
+import './Menu.css';
+import { Container, Nav, Navbar, Toast } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 const Menu = () => {
   const { user, logOut } = useAuth()
@@ -52,6 +52,6 @@ const Menu = () => {
       </Navbar>
     </>
   )
-}
+};
 
-export default Menu
+export default Menu;
